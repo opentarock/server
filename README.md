@@ -5,7 +5,7 @@ OpenTarock server
 
 ##### Lobby
 
-[Details](example.com)
+[Details](https://github.com/opentarock/server/blob/develop/protocol/client/lobby.md)
 
 ### Microservices
 
@@ -13,4 +13,4 @@ OpenTarock server
 
 Binary protocol based on [Protocol Buffers](https://code.google.com/p/protobuf/) inspired by [HTTP](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
 
-[Details](example.com)
+[Details](https://github.com/opentarock/server/blob/develop/protocol/services/comm.md)
