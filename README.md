@@ -9,6 +9,10 @@ OpenTarock server
 
 ### Microservices
 
+#### Overview
+
+![Overview](https://github.com/opentarock/server/blob/develop/services.png)
+
 #### Communication protocol
 
 Binary protocol based on [Protocol Buffers](https://code.google.com/p/protobuf/) inspired by [HTTP](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol).

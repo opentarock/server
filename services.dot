@@ -1,0 +1,21 @@
+digraph unix {
+	size="6,6";
+	node [color=lightblue2, style=filled, shape=ellipse];
+	"notify" -> "gcm";
+	"notify" -> "socket";
+	"msghandler" -> "lobby";
+    "gcm" -> "msghandler";
+    "socket" -> "msghandler";
+    "lobby" -> "tarock";
+    "tarock" -> "notify";
+    "tarock" -> "tarockbot";
+    "tarock" -> "gamehistory";
+    "tarockbot" -> "gamehistory";
+    "notify" -> "presence";
+    "msghandler" -> "presence";
+    "gcm" -> "oauth2";
+    "socket" -> "oauth2";
+    "gcm" -> "user";
+    "socket" -> "user";
+    "msghandler" -> "user";
+}
