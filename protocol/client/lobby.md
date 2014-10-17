@@ -75,7 +75,8 @@ Lobby client protocol
 | Parameter | Values | Description |
 | --- | --- | ---|
 | event | *lobby.room.leave* |  |
-| player | `Player` | A player that left the room. |
+| user_id | The user ID | A player that left the room. |
+| owner | The owner's user ID | Optionally sent is room ownership changes as a consequence of owner leaving. |
 | timestamp | *unix timestamp* | Unix timestamp of latest room state change in nanoseconds. |
 
 #### Room info
@@ -144,7 +145,7 @@ Lobby client protocol
 
 | Parameter | Values | Description |
 | --- | --- | ---|
-| id | The user ID | The unique identifier of a user. |
+| user_id | The user ID | The unique identifier of a user. |
 | nickname | User nickname | The chosen nickname of a user. |
 
 #### Room
