@@ -18,4 +18,5 @@ digraph unix {
     "gcm" -> "user";
     "socket" -> "user";
     "msghandler" -> "user";
+    "oauth2" -> "user";
 }
