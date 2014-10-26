@@ -7,6 +7,10 @@ OpenTarock server
 
 [Details](https://github.com/opentarock/server/blob/develop/protocol/client/lobby.md)
 
+##### Tarock
+
+[Details](https://github.com/opentarock/server/blob/develop/protocol/client/tarock.md)
+
 ### Microservices
 
 #### Overview
