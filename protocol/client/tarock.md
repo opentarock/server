@@ -136,7 +136,7 @@ Tarock client protocol
 | player_id | Player id | Player that has announced bonuses. |
 | bonuses | `Bonus` array | The bonuses announced. |
 | next_player | Player id | The player that should announce next. |
-| valid_bonuses | `Bonus1 array | List of bonuses that are valid to be declared (only sent to the next player announcing)` |
+| valid_bonuses | `Bonus` array | List of bonuses that are valid to be declared (only sent to the next player announcing) |
 
 | Parameter | Values | Description |
 | --- | --- | --- |
