@@ -7,7 +7,7 @@ Tarock client protocol
 
 | Parameter | Values | Description |
 | --- | --- | ---|
-| event | *game.tarock.deal |  |
+| event | *game.tarock.deal* |  |
 | hand | `Card` array | Created room info. |
 | id | Player id | Id assigned to the player. |
 
@@ -72,6 +72,37 @@ Tarock client protocol
 | event | *game.tarock.callking.finished* |  |
 | player_id | Player id | Player that has called the king. |
 | suit | `Card` suit | Suit of the called king. |
+
+#### Exchanging cards with the talon
+
+##### Request:
+
+| Parameter | Values | Description |
+| --- | --- | ---|
+| command | *game.tarock.exchange* |  |
+| picked | `number` | The index of the card set picked. |
+
+##### Response:
+
+| Parameter | Values | Description |
+| --- | --- | ---|
+| response | *game.tarock.exchange* |  |
+
+##### Errors:
+
+* **invalid_pick*** - Card set index is not correct.
+
+##### Events:
+
+| Parameter | Values | Description |
+| --- | --- | ---|
+| event | *game.tarock.exchange.start* |  |
+| player_id | Player id | Player that is exchanging cards with the talon. |
+
+| Parameter | Values | Description |
+| --- | --- | ---|
+| event | *game.tarock.exchange.finished* |  |
+| picked | `number` | The index of the card set picked. |
 
 ### Common
 
