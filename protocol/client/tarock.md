@@ -38,6 +38,7 @@ Tarock client protocol
 | player_id | Player id | The user that made the bid. |
 | contract | `Game contract` | The contract that was bid by the player. |
 | next_player | Player id | The player that should bid next. |
+| valid_bids | `Game contract` array | Valid bids for the next player (only sent to the next player bidding) |
 
 | Parameter | Values | Description |
 | --- | --- | ---|
@@ -52,7 +53,7 @@ Tarock client protocol
 | Parameter | Values | Description |
 | --- | --- | ---|
 | command | *game.tarock.callking* |  |
-| suit | `Game contract` | Suit of the called king. |
+| suit | `Card suit` | Suit of the called king. |
 
 ##### Response:
 
@@ -81,6 +82,7 @@ Tarock client protocol
 | --- | --- | ---|
 | command | *game.tarock.exchange* |  |
 | picked | `number` | The index of the card set picked. |
+| cards | `Card` array | Cards to exchange. |
 
 ##### Response:
 
@@ -91,6 +93,7 @@ Tarock client protocol
 ##### Errors:
 
 * **invalid_pick** - Card set index is not correct.
+* **invalid_card** - Card that is not allowed was discarded.
 
 ##### Events:
 
@@ -98,11 +101,13 @@ Tarock client protocol
 | --- | --- | ---|
 | event | *game.tarock.exchange.start* |  |
 | player_id | Player id | Player that is exchanging cards with the talon. |
+| invalid_cards | `Card` array | List of cards from player's hand that are not allowed to be exchanged. |
 
 | Parameter | Values | Description |
 | --- | --- | ---|
 | event | *game.tarock.exchange.finished* |  |
 | picked | `number` | The index of the card set picked. |
+| discarded | `Card` array | Tarock cards that were discarded. |
 
 #### Announcements
 
@@ -131,6 +136,7 @@ Tarock client protocol
 | player_id | Player id | Player that has announced bonuses. |
 | bonuses | `Bonus` array | The bonuses announced. |
 | next_player | Player id | The player that should announce next. |
+| valid_bonuses | `Bonus1 array | List of bonuses that are valid to be declared (only sent to the next player announcing)` |
 
 | Parameter | Values | Description |
 | --- | --- | --- |
@@ -216,7 +222,6 @@ Numbers of 1-21 and S (Skis).
 * open_beggar
 * color_valat
 * valat
-* 
 
 #### Bonuses
 
